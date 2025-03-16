@@ -1,0 +1,19 @@
+---
+apiVersion: xcloud.io/v1alpha1
+kind: XCluster
+metadata:
+  name: NAME
+  labels:
+    cluster-owner: utkarsh
+spec:
+  id: NAME
+  compositionRef:
+    name: xcloud-eks
+  parameters:
+    region: REGION
+    nodeSize: SIZE
+    version: VERSION
+    minNodeCount: 1
+  writeConnectionSecretToRef:
+    namespace: crossplane-system
+    name: crossplane-cluster-connection-secret

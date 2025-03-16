@@ -1,0 +1,83 @@
+{
+  "identifier": "create-cluster",
+  "title": "Create a cluster",
+  "userInputs": {
+    "properties": {
+      "name": {
+        "type": "string",
+        "title": "Name",
+        "description": "The name of the cluster"
+      },
+      "provider": {
+        "type": "string",
+        "title": "Provider",
+        "default": "civo",
+        "description": "The provider where the cluster is hosted",
+        "enum": [
+          "civo",
+          "aws"
+        ]
+      },
+      "cluster": {
+        "type": "string",
+        "title": "cluster",
+        "default": "eks",
+        "description": "Field to select the composition",
+        "enum": [
+          "eks",
+          "aks",
+          "gke"
+        ]
+      },
+      "region": {
+        "type": "string",
+        "title": "Region",
+        "default": "IN",
+        "description": "The public cloud region where the cluster will be created",
+        "enum": [
+          "IN",
+          "US",
+          "EU"
+        ]
+      },
+      "node-size": {
+        "type": "string",
+        "title": "Node Size",
+        "default": "small",
+        "description": "The size of the nodes",
+        "enum": [
+          "small",
+          "medium",
+          "large"
+        ]
+      },
+      "k8s-version": {
+        "type": "string",
+        "title": "Desired K8s Version",
+        "default": "1.29",
+        "description": "The Kubernetes version required, upgrade possible but downgrade not possible for managed k8s"
+      },
+      "min-node-count": {
+        "type": "string",
+        "title": "Minimum number of nodes",
+        "default": "1",
+        "description": "The minimun number of nodes (autoscaler might increase this number)"
+      }
+    },
+    "required": [
+      "name",
+      "provider",
+      "node-size",
+      "min-node-count"
+    ]
+  },
+  "invocationMethod": {
+    "type": "GITHUB",
+    "org": "Sir-gits-a-lot",
+    "repo": "idp-demo",
+    "workflow": "create-cluster.yaml",
+    "omitPayload": true
+  },
+  "trigger": "CREATE",
+  "description": "Create a new cluster."
+}
