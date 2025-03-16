@@ -31,7 +31,7 @@
         "k8s-version": {
           "type": "string",
           "title": "Desired K8s Version",
-          "default": "1.32",
+          "default": "1.32  ",
           "description": "The Kubernetes version required, upgrade possible but downgrade not possible for managed k8s"
         },
         "min-node-count": {
