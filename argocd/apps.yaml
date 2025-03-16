@@ -9,7 +9,7 @@ metadata:
 spec:
   project: production
   source:
-    repoURL: https://github.com/Sir-gits-a-lot/idp-demo
+    repoURL: https://github.com/Sir-gits-a-lot/cluster-vending-machine
     targetRevision: HEAD
     path: apps
   destination:
@@ -30,7 +30,7 @@ metadata:
 spec:
   project: production
   source:
-    repoURL: https://github.com/Sir-gits-a-lot/idp-demo
+    repoURL: https://github.com/Sir-gits-a-lot/cluster-vending-machine
     targetRevision: HEAD
     path: infra
   destination:
