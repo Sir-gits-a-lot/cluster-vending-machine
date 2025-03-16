@@ -8,12 +8,13 @@
         "provider": {
             "type": "string",
             "title": "Provider",
-            "default": "n/a",
+            "default": "aws",
             "description": "The provider where the cluster is hosted",
             "enum": [
                 "civo",
                 "aws",
-                "n/a"
+                "azure",
+                "gcp"
             ]
         },
         "node-size": {
@@ -30,7 +31,7 @@
         "k8s-version": {
           "type": "string",
           "title": "Desired K8s Version",
-          "default": "1.29",
+          "default": "1.32",
           "description": "The Kubernetes version required, upgrade possible but downgrade not possible for managed k8s"
         },
         "min-node-count": {

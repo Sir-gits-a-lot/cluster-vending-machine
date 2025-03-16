@@ -16,7 +16,7 @@
   "invocationMethod": {
     "type": "GITHUB",
     "org": "Sir-gits-a-lot",
-    "repo": "idp-demo",
+    "repo": "cluster-vending-machine",
     "workflow": "delete-cluster.yaml",
     "omitPayload": true
   },

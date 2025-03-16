@@ -24,7 +24,7 @@ on:
       k8s-version:
         required: true
         description: "K8s version for the cluster"
-        default: "1.29"
+        default: "1.32"
       min-node-count:
         required: true
         description: "The minnimun number of nodes (autoscaler might increase this number)"
